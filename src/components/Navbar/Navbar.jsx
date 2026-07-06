@@ -98,7 +98,7 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center space-x-6 text-[10px] font-medium tracking-widest uppercase">
-            <Link to="/projects" className="hover:opacity-70 transition-opacity pointer-events-none" onMouseEnter={() => handleDropdownEnter(null)}>Projects</Link>
+            <Link to="/projects" className="hover:opacity-70 transition-opacity" onMouseEnter={() => handleDropdownEnter(null)}>Projects</Link>
 
             {/* Expertise with Dropdown */}
             <div
@@ -106,20 +106,20 @@ export default function Navbar() {
               onMouseEnter={() => handleDropdownEnter('expertise')}
               onMouseLeave={handleDropdownLeave}
             >
-              <Link to="/expertise" className={`pointer-events-none transition-opacity flex items-center gap-1 ${activeDropdown === 'expertise' ? 'opacity-100' : 'hover:opacity-70'}`}>
+              <Link to="/expertise" className={`transition-opacity flex items-center gap-1 ${activeDropdown === 'expertise' ? 'opacity-100' : 'hover:opacity-70'}`}>
                 Expertise
                 <span className={`text-[10px] transition-transform duration-300 ${activeDropdown === 'expertise' ? 'rotate-180' : ''}`}>▼</span>
               </Link>
             </div>
 
-            <Link to="/people" className="hover:opacity-70 transition-opacity pointer-events-none" onMouseEnter={() => handleDropdownEnter(null)}>People</Link>
+            <Link to="/people" className="hover:opacity-70 transition-opacity" onMouseEnter={() => handleDropdownEnter(null)}>People</Link>
 
             <div
               className="relative h-full py-4 -my-4 flex items-center cursor-pointer"
               onMouseEnter={() => handleDropdownEnter('about-us')}
               onMouseLeave={handleDropdownLeave}
             >
-              <Link to="/about" className={`pointer-events-none transition-opacity flex items-center gap-1 ${activeDropdown === 'about-us' ? 'opacity-100' : 'hover:opacity-70'}`}>
+              <Link to="/about" className={`transition-opacity flex items-center gap-1 ${activeDropdown === 'about-us' ? 'opacity-100' : 'hover:opacity-70'}`}>
                 About Us
                 <span className={`text-[10px] transition-transform duration-300 ${activeDropdown === 'about-us' ? 'rotate-180' : ''}`}>▼</span>
               </Link>
@@ -130,20 +130,20 @@ export default function Navbar() {
               onMouseEnter={() => handleDropdownEnter('research')}
               onMouseLeave={handleDropdownLeave}
             >
-              <Link to="/research" className={`pointer-events-none transition-opacity flex items-center gap-1 ${activeDropdown === 'research' ? 'opacity-100' : 'hover:opacity-70'}`}>
+              <Link to="/research" className={`transition-opacity flex items-center gap-1 ${activeDropdown === 'research' ? 'opacity-100' : 'hover:opacity-70'}`}>
                 Research
                 <span className={`text-[10px] transition-transform duration-300 ${activeDropdown === 'research' ? 'rotate-180' : ''}`}>▼</span>
               </Link>
             </div>
 
-            <Link to="/sustainability" className="hover:opacity-70 transition-opacity pointer-events-none" onMouseEnter={() => handleDropdownEnter(null)}>Sustainability</Link>
+            <Link to="/sustainability" className="hover:opacity-70 transition-opacity" onMouseEnter={() => handleDropdownEnter(null)}>Sustainability</Link>
 
             <div 
               className="relative h-full py-4 -my-4 flex items-center cursor-pointer"
               onMouseEnter={() => handleDropdownEnter('media-hub')}
               onMouseLeave={handleDropdownLeave}
             >
-              <Link to="/media-hub" className={`pointer-events-none transition-opacity flex items-center gap-1 ${activeDropdown === 'media-hub' ? 'opacity-100' : 'hover:opacity-70'}`}>
+              <Link to="/media-hub" className={`transition-opacity flex items-center gap-1 ${activeDropdown === 'media-hub' ? 'opacity-100' : 'hover:opacity-70'}`}>
                 Media Hub 
                 <span className={`text-[10px] transition-transform duration-300 ${activeDropdown === 'media-hub' ? 'rotate-180' : ''}`}>▼</span>
               </Link>

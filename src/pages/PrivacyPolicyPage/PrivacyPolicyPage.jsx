@@ -1,34 +1,28 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
+import HeroImage from '../../components/common/HeroImage';
+import ContentSection from '../../components/common/ContentSection';
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="w-full bg-black text-white min-h-screen">
       
       {/* Hero Section */}
-      <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
-        <img 
-          src="https://media-prod.zha.com/zhweb-prod-media/media/lcej4iia/01825_cp_hc_jan25_n313292.jpg?w=1920" 
-          alt="Privacy Policy Hero" 
-          className="w-full h-full object-cover grayscale opacity-80"
-        />
-        <div className="absolute bottom-0 left-0 w-full px-6 md:px-12 pb-12 md:pb-16">
-          <h1 className="font-primary text-5xl md:text-7xl lg:text-8xl font-normal text-white tracking-tight">
-            Privacy Policy
-          </h1>
-        </div>
-      </div>
+      <HeroImage 
+        title="Privacy Policy"
+        imgSrc="https://media-prod.zha.com/zhweb-prod-media/media/lcej4iia/01825_cp_hc_jan25_n313292.jpg?w=1920"
+        imgAlt="Privacy Policy Hero"
+        heightClass="h-[60vh] md:h-[90vh]"
+        grayscale={true}
+        hideScrollIcon={true}
+        titleClassName="font-primary text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-white"
+      />
 
       {/* Main Content Area */}
       <div className="w-full px-6 md:px-12 py-16 md:py-24 flex flex-col gap-6">
         
         {/* Section 1: Data Protection */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Data protection</h2>
+        <ContentSection title="Data protection" dividerColor={null}>
             <h3 className="text-white text-xl md:text-2xl tracking-wide font-normal">Introduction</h3>
             <p className='text-xl'>In its everyday business operations ABH Architects makes use of a variety of data about identifiable individuals, including data about:</p>
             <ul className="list-none flex flex-col gap-1 text-xl">
@@ -49,16 +43,10 @@ export default function PrivacyPolicyPage() {
               <li>- GDPR Roles and Responsibilities</li>
               <li>- Records Retention and Protection Policy</li>
             </ul>
-          </div>
-        </div>
+        </ContentSection>
 
         {/* Section 2: Data Protection Policy */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Data Protection Policy</h2>
+        <ContentSection title="Data Protection Policy" dividerColor={null}>
             <h3 className="text-white text-xl md:text-2xl mb-2 tracking-wide font-normal">The General Data Protection Regulation</h3>
             <p className='text-xl'>The General Data Protection Regulation 2016 (GDPR) is one of the most significant pieces of legislation affecting the way that carries out its information processing activities. Significant fines are applicable if a breach is deemed to have occurred under the GDPR, which is designed to protect the personal data of citizens of the European Union. It is ABH Architects' policy to ensure that our compliance with the GDPR and other relevant legislation is clear and demonstrable at all times.</p>
             
@@ -67,16 +55,10 @@ export default function PrivacyPolicyPage() {
             <p className='text-xl'><em>Personal data</em> is defined as:<br/><em>any information relating to an identified or identifiable natural person ('data subject'); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person;</em></p>
             <p className='text-xl'><em>'processing'</em> means:<br/><em>any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction;</em></p>
             <p className='text-xl'><em>'controller'</em> means:<br/><em>the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data; where the purposes and means of such processing are determined by Union or Member State law, the controller or the specific criteria for its nomination may be provided for by Union or Member State law;</em></p>
-          </div>
-        </div>
+        </ContentSection>
 
         {/* Section 3: Principles */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Principles Relating to Processing of Personal Data</h2>
+        <ContentSection title="Principles Relating to Processing of Personal Data" dividerColor={null}>
             <p className='text-xl'>There are a number of fundamental principles upon which the GDPR is based.<br/>These are as follows:<br/>1. Personal data shall be:</p>
             <ol className="list-decimal pl-4 flex flex-col gap-4 text-xl">
               <li><em>processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency');</em></li>
@@ -88,16 +70,10 @@ export default function PrivacyPolicyPage() {
             </ol>
             <p className='text-xl'>2. The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability').</p>
             <p className='text-xl'>ABH Architects will ensure that it complies with all of these principles both in the processing it currently carries out and as part of the introduction of new methods of processing such as new IT systems.</p>
-          </div>
-        </div>
+        </ContentSection>
 
         {/* Section 4: Rights of the Individual */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Rights of the Individual</h2>
+        <ContentSection title="Rights of the Individual" dividerColor={null}>
             <p className='text-xl'>The data subject also has rights under the GDPR. These consist of:</p>
             <ol className="list-decimal pl-4 flex flex-col gap-1 text-xl">
               <li>The right to be informed</li>
@@ -110,16 +86,10 @@ export default function PrivacyPolicyPage() {
               <li>Rights in relation to automated decision making and profiling.</li>
             </ol>
             <p className='text-xl'>Each of these rights are supported by appropriate procedures ABH Architects that allow the required action to be taken within the timescales stated in the GDPR.</p>
-          </div>
-        </div>
+        </ContentSection>
 
         {/* Section 5: Lawfulness of Processing */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Lawfulness of Processing</h2>
+        <ContentSection title="Lawfulness of Processing" dividerColor={null}>
             <p className='text-xl'>There are six alternative ways in which the lawfulness of a specific case of processing of personal data may be established under the GDPR. It is ABH Architects' policy to identify the appropriate basis for processing and to document it, in accordance with the Regulation. The options are described in brief in the following sections.</p>
             
             <h3 className="text-white text-xl md:text-2xl mt-4 mb-2 tracking-wide font-normal">Consent</h3>
@@ -151,16 +121,10 @@ export default function PrivacyPolicyPage() {
               <li>- What controls are necessary to address the identified risks and demonstrate compliance with legislation</li>
             </ul>
             <p className='text-xl'>Use of techniques such as data minimization and pseudonymisation will be considered where applicable and appropriate.</p>
-          </div>
-        </div>
+        </ContentSection>
 
         {/* Section 6: Additional Policies */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Contracts Involving the Processing of Personal Data</h2>
+        <ContentSection title="Contracts Involving the Processing of Personal Data" dividerColor={null}>
             <p className='text-xl'>ABH Architects will ensure that all relationships it enters into that involve the processing of personal data are subject to a documented contract that includes the specific information and terms required by the GDPR. For more information, see the GDPR Controller-Processor Agreement Policy.</p>
             
             <h2 className="text-white text-3xl md:text-4xl mt-8 mb-2 tracking-wide font-normal">International Transfers of Personal Data</h2>
@@ -198,16 +162,10 @@ export default function PrivacyPolicyPage() {
               <li>- Relevant technical and organisational controls in place</li>
             </ul>
             <p className='text-xl'>These actions are reviewed on a regular basis as part of the management process concerned with data protection.</p>
-          </div>
-        </div>
+        </ContentSection>
 
         {/* Section 7: Cookie Policy */}
-        <div className="flex flex-col md:flex-row w-full">
-          <div className="hidden md:block md:w-1/3 relative">
-            
-          </div>
-          <div className="w-full md:w-2/3 max-w-2xl flex flex-col gap-6 font-primary text-[15px] leading-relaxed text-[#a0a0a0]">
-            <h2 className="text-white text-3xl md:text-4xl mb-2 tracking-wide font-normal">Cookie Policy</h2>
+        <ContentSection title="Cookie Policy" dividerColor={null}>
             <h3 className="text-white text-xl md:text-2xl mb-2 tracking-wide font-normal">What are cookies?</h3>
             <p className='text-xl'>This Cookie Policy explains what cookies are, how we use them, the types of cookies we use (i.e., the information we collect using cookies and how that information is used), and how to manage your cookie settings.</p>
             <p className='text-xl'>Cookies are small text files used to store small pieces of information. They are stored on your device when a website loads in your browser. These cookies help ensure that the website functions properly, enhance security, provide a better user experience, and analyse performance to identify what works and where improvements are needed. Some cookies are saved on your device only for the duration of your visit to our website. Each cookie has a defined duration; see the cookie list for the specific expiry of each cookie.</p>
@@ -269,8 +227,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className='text-xl'>If you are using a different web browser, please refer to its official support documentation.</p>
             <p className='text-xl'>Blocking strictly necessary cookies in your browser may affect how the site works.</p>
-          </div>
-        </div>
+        </ContentSection>
 
       </div>
       <Footer />
